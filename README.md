@@ -126,7 +126,7 @@ The site is automatically deployed to GitHub Pages via GitHub Actions:
 
 1. **Push to main** triggers build
 2. **Build process** creates optimized bundle
-3. **Deploy** to `https://italysec.github.io`
+3. **Deploy** to `https://italysec.com`
 
 ### Manual Deploy
 ```bash

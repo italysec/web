@@ -10,7 +10,7 @@ export default defineConfig({
       '@': resolve(__dirname, './src'),
     },
   },
-  base: process.env.NODE_ENV === 'production' ? '/italysec.github.io/' : '/',
+  base: '/',
   build: {
     outDir: 'dist',
     sourcemap: true,
