@@ -6,12 +6,12 @@ import './index.css'
 
 // Easter egg for invite contact
 function inv1t3() {
-    var c0nt4ct = [[0x67], [0x40], [0x69, 0x74, 0x61, 0x6c, 0x79, 0x73, 0x65, 0x63], [0x2e], [0x63, 0x6f, 0x6d]];
-    var __xor__ = 0x00;
-    var r3sult = '';
-    for (var i = 0; i < c0nt4ct.length; i++) {
-        var s = '';
-        for (var j = 0; j < c0nt4ct[i].length; j++) {
+    const c0nt4ct = [[0x67], [0x40], [0x69, 0x74, 0x61, 0x6c, 0x79, 0x73, 0x65, 0x63], [0x2e], [0x63, 0x6f, 0x6d]];
+    const __xor__ = 0x00;
+    let r3sult = '';
+    for (let i = 0; i < c0nt4ct.length; i++) {
+        let s = '';
+        for (let j = 0; j < c0nt4ct[i].length; j++) {
             s += String.fromCharCode(c0nt4ct[i][j] ^ __xor__);
         }
         r3sult += s;
