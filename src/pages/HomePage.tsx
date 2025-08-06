@@ -1,15 +1,17 @@
-import { motion } from 'framer-motion'
-import { Lock, Mail, Terminal } from 'lucide-react'
-import { Button } from '@/components/Button'
+import { motion } from 'framer-motion';
+import { Lock, Mail, Terminal } from 'lucide-react';
+import { Button } from '@/components/Button';
 
 export function HomePage() {
   const handleSlackAccess = () => {
-    window.open('https://italysec.slack.com/', '_blank', 'noopener,noreferrer')
-  }
+    window.open('https://italysec.slack.com/', '_blank', 'noopener,noreferrer');
+  };
 
   const handleInviteRequest = () => {
-    alert('Per richiedere un invito, contatta un membro della community o invia una mail.')
-  }
+    alert(
+      'Per richiedere un invito, contatta un membro della community o invia una mail.'
+    );
+  };
 
   return (
     <div className="min-h-screen bg-secondary-900 flex items-center justify-center">
@@ -22,7 +24,11 @@ export function HomePage() {
           className="mb-8"
         >
           <div className="w-20 h-20 bg-secondary-700/50 rounded-xl mx-auto flex items-center justify-center border border-secondary-600/30 mb-6">
-            <img src="/isec.png" alt="ItalySec" className="w-12 h-12 object-contain" />
+            <img
+              src="/isec.png"
+              alt="ItalySec"
+              className="w-12 h-12 object-contain"
+            />
           </div>
           <h1 className="text-3xl font-bold text-secondary-100 mb-2">
             ItalySec
@@ -70,5 +76,5 @@ export function HomePage() {
         </motion.div>
       </div>
     </div>
-  )
-} 
+  );
+}

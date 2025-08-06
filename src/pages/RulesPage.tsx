@@ -1,53 +1,66 @@
-import { motion } from 'framer-motion'
-import { Hash, Users, Shield, Mail } from 'lucide-react'
-import { Button } from '@/components/Button'
-import { Card } from '@/components/Card'
+import { motion } from 'framer-motion';
+import { Hash, Users, Shield, Mail } from 'lucide-react';
+import { Button } from '@/components/Button';
+import { Card } from '@/components/Card';
 
 export function RulesPage() {
   const channels = [
     {
       name: 'generale',
-      description: 'Discussioni generali su cosa succede nel mondo dell\'IT Security.',
-      icon: <Hash className="w-5 h-5" />
+      description:
+        "Discussioni generali su cosa succede nel mondo dell'IT Security.",
+      icon: <Hash className="w-5 h-5" />,
     },
     {
       name: 'eventi',
-      description: 'Segnalazioni di eventi a cui partecipiamo o che consigliamo di partecipare.',
-      icon: <Hash className="w-5 h-5" />
+      description:
+        'Segnalazioni di eventi a cui partecipiamo o che consigliamo di partecipare.',
+      icon: <Hash className="w-5 h-5" />,
     },
     {
       name: 'lavoro',
-      description: 'Segnalazioni di offerte o richieste di lavoro o consulenza.',
-      icon: <Hash className="w-5 h-5" />
+      description:
+        'Segnalazioni di offerte o richieste di lavoro o consulenza.',
+      icon: <Hash className="w-5 h-5" />,
     },
     {
       name: 'off-topic',
-      description: 'Discussioni generli non attinenti all\'IT Security.',
-      icon: <Hash className="w-5 h-5" />
-    }
-  ]
+      description: "Discussioni generli non attinenti all'IT Security.",
+      icon: <Hash className="w-5 h-5" />,
+    },
+    {
+      name: 'caciara',
+      description: "Dove c'è caciara c'è gioia.",
+      icon: <Hash className="w-5 h-5" />,
+    },
+  ];
 
   const guidelines = [
     {
       icon: <Users className="w-5 h-5" />,
       title: 'Profilo',
-      description: 'Slack permette di personalizzare il proprio profilo. Usiamolo per far capire a tutti chi siamo.'
+      description:
+        'Slack permette di personalizzare il proprio profilo. Usiamolo per far capire a tutti chi siamo.',
     },
     {
       icon: <Shield className="w-5 h-5" />,
       title: 'Inviti',
-      description: 'Tutti i nuovi membri DEVONO essere proposti in #membernomination. Chi vuole può entrare nel canale sia per proporre sia per votare.'
+      description:
+        'Tutti i nuovi membri DEVONO essere proposti in #membernomination. Chi vuole può entrare nel canale sia per proporre sia per votare.',
     },
     {
       icon: <Mail className="w-5 h-5" />,
       title: 'Enjoy!',
-      description: 'Divertiti e contribuisci alla community in modo costruttivo.'
-    }
-  ]
+      description:
+        'Divertiti e contribuisci alla community in modo costruttivo.',
+    },
+  ];
 
   const handleInviteRequest = () => {
-    alert('Per richiedere un invito, contatta un membro della community o invia una mail.')
-  }
+    alert(
+      'Per richiedere un invito, contatta un membro della community o invia una mail.'
+    );
+  };
 
   return (
     <div className="min-h-screen bg-secondary-900">
@@ -63,8 +76,9 @@ export function RulesPage() {
             Regolamento ItalySec
           </h1>
           <p className="text-lg text-secondary-400 max-w-2xl mx-auto">
-            ItalySec vuole essere una community (sottoforma di una chat Slack) composta da persone italiane (o italofone), 
-            che vivono in Italia o all'estero, che fanno parte dell'industria dell'IT Security.
+            ItalySec vuole essere una community (sottoforma di una chat Slack)
+            composta da persone italiane (o italofone), che vivono in Italia o
+            all'estero, che fanno parte dell'industria dell'IT Security.
           </p>
         </motion.div>
 
@@ -80,8 +94,10 @@ export function RulesPage() {
               Scopo della Community
             </h2>
             <p className="text-secondary-400 leading-relaxed">
-              Lo scopo della community è di agevolare lo scambio di informazioni, opinioni ed eventi in un ambiente 
-              trusted con persone di background tecnico che hanno la "skin in the game" nell'IT Security.
+              Lo scopo della community è di agevolare lo scambio di
+              informazioni, opinioni ed eventi in un ambiente trusted con
+              persone di background tecnico che hanno la "skin in the game"
+              nell'IT Security.
             </p>
           </Card>
         </motion.div>
@@ -107,9 +123,7 @@ export function RulesPage() {
                 <Card className="h-full bg-secondary-800 border-secondary-700">
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-secondary-700 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <div className="text-secondary-300">
-                        {channel.icon}
-                      </div>
+                      <div className="text-secondary-300">{channel.icon}</div>
                     </div>
                     <div>
                       <h3 className="font-semibold text-secondary-100 mb-2">
@@ -138,8 +152,9 @@ export function RulesPage() {
           </h2>
           <div className="bg-gradient-to-br from-secondary-800 to-secondary-900 rounded-2xl p-8 border border-secondary-700">
             <p className="text-secondary-300 mb-8 text-center">
-              Più che un regolamento in senso stretto, le seguenti sono linee guida che tutti dovremmo rispettare 
-              per preservare i principi fondamentali della community.
+              Più che un regolamento in senso stretto, le seguenti sono linee
+              guida che tutti dovremmo rispettare per preservare i principi
+              fondamentali della community.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {guidelines.map((guideline, index) => (
@@ -151,9 +166,7 @@ export function RulesPage() {
                   className="text-center"
                 >
                   <div className="w-12 h-12 bg-secondary-700 rounded-xl flex items-center justify-center mx-auto mb-4 shadow-sm">
-                    <div className="text-secondary-300">
-                      {guideline.icon}
-                    </div>
+                    <div className="text-secondary-300">{guideline.icon}</div>
                   </div>
                   <h3 className="font-semibold text-secondary-100 mb-2">
                     {guideline.title}
@@ -183,7 +196,13 @@ export function RulesPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
-                onClick={() => window.open('https://italysec.slack.com/', '_blank', 'noopener,noreferrer')}
+                onClick={() =>
+                  window.open(
+                    'https://italysec.slack.com/',
+                    '_blank',
+                    'noopener,noreferrer'
+                  )
+                }
                 icon={<Shield className="w-5 h-5" />}
                 className="bg-secondary-700 hover:bg-secondary-600 text-secondary-100 border border-secondary-600"
               >
@@ -202,5 +221,5 @@ export function RulesPage() {
         </motion.div>
       </div>
     </div>
-  )
-} 
+  );
+}

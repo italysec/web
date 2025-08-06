@@ -1,7 +1,7 @@
-import { Routes, Route } from 'react-router-dom'
-import { Layout } from '@/components/Layout'
-import { HomePage } from '@/pages/HomePage'
-import { RulesPage } from '@/pages/RulesPage'
+import { Routes, Route } from 'react-router-dom';
+import { Layout } from '@/components/Layout';
+import { HomePage } from '@/pages/HomePage';
+import { RulesPage } from '@/pages/RulesPage';
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
         <Route path="/regolamento" element={<RulesPage />} />
       </Routes>
     </Layout>
-  )
+  );
 }
 
-export default App 
+export default App;

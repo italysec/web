@@ -1,15 +1,15 @@
-import { ReactNode } from 'react'
-import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
-import { useState } from 'react'
+import { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Menu, X } from 'lucide-react';
+import { useState } from 'react';
 
 interface LayoutProps {
-  children: ReactNode
+  children: ReactNode;
 }
 
 export function Layout({ children }: LayoutProps) {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen flex flex-col bg-secondary-900">
@@ -20,9 +20,15 @@ export function Layout({ children }: LayoutProps) {
             {/* Logo */}
             <Link to="/" className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-lg overflow-hidden bg-secondary-700 flex items-center justify-center">
-                <img src="/isec.png" alt="ItalySec" className="w-8 h-8 object-contain" />
+                <img
+                  src="/isec.png"
+                  alt="ItalySec"
+                  className="w-8 h-8 object-contain"
+                />
               </div>
-              <span className="text-xl font-bold text-secondary-100">ItalySec</span>
+              <span className="text-xl font-bold text-secondary-100">
+                ItalySec
+              </span>
             </Link>
 
             {/* Mobile menu button - only show on mobile */}
@@ -30,7 +36,11 @@ export function Layout({ children }: LayoutProps) {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="md:hidden p-2 rounded-md text-secondary-300 hover:text-primary-400 hover:bg-secondary-700"
             >
-              {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
             </button>
           </div>
 
@@ -69,19 +79,26 @@ export function Layout({ children }: LayoutProps) {
           <div className="text-center">
             <div className="flex items-center justify-center space-x-3 mb-4">
               <div className="w-8 h-8 bg-secondary-700 rounded-lg flex items-center justify-center">
-                <img src="/isec.png" alt="ItalySec" className="w-6 h-6 object-contain" />
+                <img
+                  src="/isec.png"
+                  alt="ItalySec"
+                  className="w-6 h-6 object-contain"
+                />
               </div>
-              <span className="text-lg font-bold text-secondary-100">ItalySec</span>
+              <span className="text-lg font-bold text-secondary-100">
+                ItalySec
+              </span>
             </div>
           </div>
 
           <div className="mt-8 pt-8 border-t border-secondary-700">
             <p className="text-secondary-500 text-sm text-center">
-              © 2016-2025 ItalySec. Community privata di professionisti dell'IT Security.
+              © 2016-2025 ItalySec. Community privata di professionisti dell'IT
+              Security.
             </p>
           </div>
         </div>
       </footer>
     </div>
-  )
-} 
+  );
+}
